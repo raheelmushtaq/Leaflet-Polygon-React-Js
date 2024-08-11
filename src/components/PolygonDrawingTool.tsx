@@ -11,7 +11,7 @@ const PolygonDrawer: React.FC = () => {
   const [polygons, setPolygons] = useState<any[]>([]);
   const featureGroupRef = useRef<any>(null);
   const zoom = map.getZoom()
-  
+
   // //  working fine. but intersects are not shown properly
   // const onCreated = (e: any) => {
   //   const layer = e.layer;
@@ -33,9 +33,6 @@ const PolygonDrawer: React.FC = () => {
 
   // Adjusted function to check if the polygon is closed
   const isPolygonClosed = (latLngs: L.LatLng[], closeRadius: number = 100) => {
-
-    console.log("closed");
-    return true;
     if (latLngs.length < 4) return false;
 
     const firstPoint = latLngs[0];
